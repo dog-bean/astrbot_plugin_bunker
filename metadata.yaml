@@ -1,0 +1,17 @@
+name: astrbot_plugin_bunker
+display_name: 防空洞
+author: dog-bean
+version: 0.1.0
+description: 在 WebUI 插件扩展页里开一条旁路通道，复用同一个会话（同一个 Bot 人格与记忆）聊天，不依赖 QQ 登录，也不经过任何第三方协议。
+desc: 把网页输入装成真实私聊事件，走 AstrBot 自己的处理流水线，回复直接回到网页。
+repo: "https://github.com/dog-bean/astrbot_plugin_bunker"
+category: 其他
+tags:
+  - 旁路通道
+  - 备份通道
+  - 插件扩展页
+  - 不依赖 QQ
+icon: ""
+support_platforms:
+  - aiocqhttp
+astrbot_version: ">=4.22.0"

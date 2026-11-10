@@ -1,0 +1,50 @@
+{
+  "channel": {
+    "description": "通道设置",
+    "type": "object",
+    "items": {
+      "owner_qq": {
+        "description": "对话对象 QQ",
+        "hint": "旁路通道伪装成这个人的私聊，共享同一份会话记忆。填你自己的 QQ 号，必填。",
+        "type": "string",
+        "default": ""
+      },
+      "platform_id": {
+        "description": "复用的平台标识",
+        "hint": "必须和 QQ 适配器的平台 ID 一致，否则拿不到同一份人格和上下文。填错就会变成另一个空白会话。",
+        "type": "string",
+        "default": ""
+      },
+      "sender_name": {
+        "description": "对方显示名",
+        "hint": "只影响事件里记录的昵称。",
+        "type": "string",
+        "default": "用户"
+      },
+      "bot_name": {
+        "description": "我这边的显示名",
+        "hint": "网页里左边回复用的名字。",
+        "type": "string",
+        "default": "鲸鲸"
+      }
+    }
+  },
+  "runtime": {
+    "description": "运行参数",
+    "type": "object",
+    "items": {
+      "reply_timeout": {
+        "description": "等待回复秒数",
+        "hint": "超时后网页会提示没等到，但模型仍然可能最终把回复发到 QQ 那边。",
+        "type": "int",
+        "default": 180
+      },
+      "max_history": {
+        "description": "网页保留条数",
+        "hint": "只影响网页里显示的历史，不影响模型上下文。",
+        "type": "int",
+        "default": 300
+      }
+    }
+  }
+}
